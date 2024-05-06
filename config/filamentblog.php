@@ -17,10 +17,10 @@ return [
     'route' => [
         'prefix' => 'blogs',
         'middleware' => ['web'],
-//        'home' => [
-//            'name' => 'filamentblog.home',
-//            'url' => env('APP_URL'),
-//        ],
+        //        'home' => [
+        //            'name' => 'filamentblog.home',
+        //            'url' => env('APP_URL'),
+        //        ],
         'login' => [
             'name' => 'filamentblog.post.login',
         ],

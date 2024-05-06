@@ -4,7 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class () extends Migration {
+return new class() extends Migration
+{
     /**
      * Run the migrations.
      *
@@ -85,9 +86,8 @@ return new class () extends Migration {
             $table->timestamps();
         });
 
-
-// Check if the column exists
-        if (!Schema::hasColumn($tableName, $columnName)) {
+        // Check if the column exists
+        if (! Schema::hasColumn($tableName, $columnName)) {
             // Column doesn't exist, so add it to the table
             Schema::table($tableName, function (Blueprint $table) use ($columnName) {
                 $table->string($columnName)->nullable();
